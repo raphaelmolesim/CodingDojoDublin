@@ -1,7 +1,0 @@
-require 'stone_paper_scissor'
-
-describe "StonePaperScissor" do
-	it "should be able to create a instance" do
-		StonePaperScissor.new.class.should be == StonePaperScissor
-	end
-end
