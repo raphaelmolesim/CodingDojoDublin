@@ -1,6 +1,6 @@
 class StonePaperScissor
 
-	@@rules = {
+	@@rules = Hash.new(:draw).merge({
 		[:stone, :scissor] => :left_wins,
 		[:stone, :paper] => :right_wins,
 
@@ -9,9 +9,9 @@ class StonePaperScissor
 
 		[:scissor, :stone] => :right_wins,
 		[:scissor, :paper] => :left_wins,
-	}
+	})
 
     def play(player_one, player_two)
-		@@rules.fetch [player_one, player_two], :draw
+		@@rules[ [player_one, player_two] ]
     end
 end
