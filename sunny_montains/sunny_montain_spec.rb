@@ -1,13 +1,13 @@
-require "sunny_montains"
+require "sunny_montain"
 
-describe SunnyMontains do
+describe SunnyMontain do
 
 	it "should be able to create a instance" do
-		SunnyMontains.new.class.should be == SunnyMontains
+		SunnyMontain.new.class.should be == SunnyMontain
 	end
 	
 	it "should be able to receive the graph" do
-		@sunny = SunnyMontains.new
+		@sunny = SunnyMontain.new
 		@sunny.points << Point.new(0, 1)
 		@sunny.points.size.should be == 1
 	end

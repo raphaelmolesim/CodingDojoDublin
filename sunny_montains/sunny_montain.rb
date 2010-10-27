@@ -1,4 +1,4 @@
-class SunnyMontains
+class SunnyMontain
 
 	attr_accessor :points
 
