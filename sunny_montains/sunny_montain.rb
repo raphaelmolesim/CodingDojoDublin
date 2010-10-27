@@ -15,16 +15,23 @@ class SunnyMontain
 	def length_of_sunshine
 		i = 0
 		total_len = 0.0
-		max_y = -1
+		
+		
+		max_y = 0 
 		
 		(points.size-1).times do
-			puts(total_len)
-			if (max_y < points[i+1].y)
-				
+			if max_y == 0
+				total_len += hyp(points[i], points[i+1])
 				max_y = points[i+1].y
-		  	total_len += hyp(points[i], points[i+1]) 
-		  end
-		  i = i + 1
+			else
+				if (max_y < points[i+1].y)
+					height = magic_hypothenuse(points[i], points[i+1], max_y)
+					total_len += height
+					max_y = points[i+1].y	
+					
+				end		
+			end
+			i = i + 1
 		end
 		
 		total_len		
@@ -36,6 +43,7 @@ class SunnyMontain
 	
 	def magic_hypothenuse(p1, p2, y)
 		hyp1 = hyp(p1, p2)
+		return hyp1 if (p1.y == y)
 		height1 = p1.y.to_f - p2.y.to_f
 		height2 = p1.y.to_f - y
 		(hyp1 * height2)/height1

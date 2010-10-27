@@ -47,13 +47,13 @@ describe SunnyMontain do
 	end
 	
 	it "should calculate a complex path with both hidden and visible sides" do
-		pending
+		
 		@sunny.points << Point.new(10, 0)
 		@sunny.points << Point.new(8, 1)
 		@sunny.points << Point.new(6, 0)
 		@sunny.points << Point.new(4, 2)
 		
-		@sunny.length_of_sunshine.should be == Math.sqrt(5) + Math.sqrt(5)
+		@sunny.length_of_sunshine.should be == Math.sqrt(5) + Math.sqrt(2)
 	end
 	
 	it "should deliver magic power" do
@@ -65,5 +65,19 @@ describe SunnyMontain do
 
     hyp.should be == Math.sqrt(2)
 	end
+	
+	it "should count the same y point on the magic_power" do
+		  y = 1
+		p1 = Point.new(6, 1)
+		p2 = Point.new(4, 3)
+    
+    hyp = @sunny.magic_hypothenuse(p1, p2, y)
+
+    hyp.should be == Math.sqrt(8)
+	
+	
+	end
+	
+	
 
 end
