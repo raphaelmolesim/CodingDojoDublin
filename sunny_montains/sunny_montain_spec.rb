@@ -27,7 +27,7 @@ describe SunnyMontain do
 		point1 = Point.new(0, 10)
 		point2 = Point.new(1, 8)
 		
-		@sunny.distance_covered(point1, point2).should be == Math.sqrt(5)	
+		@sunny.distance_covered(point1, point2).should be == Math.sqrt(5)
 	end
 
 end
