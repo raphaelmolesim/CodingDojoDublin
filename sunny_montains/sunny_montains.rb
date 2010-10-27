@@ -1,0 +1,3 @@
+class SunnyMontains
+
+end
