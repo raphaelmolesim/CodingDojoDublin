@@ -18,4 +18,8 @@ describe OverlappingArea do
     overlapping_area([0,0,2,2], [0,0,2,1]).should == 2
   end
   
+  it "should return 1 with x2 and y2 of r1 smaller then x2, y2 of r2" do
+    overlapping_area([0,0,2,2], [1,0,2,1]).should == 1
+  end
+  
 end
