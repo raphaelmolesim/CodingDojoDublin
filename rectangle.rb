@@ -8,7 +8,12 @@ class Rectangle
   end
   
   def overlaps?(other)
-    (self[1][0] >= other[1][0] or self[1][1] >= other[1][1]) and
+    big, small = other, self
     
+    # p "#{small[0][0]} <= #{big[1][0]} and #{big[1][0]} <= #{small[1][0]}"
+    # p "#{big[0][1]} <= #{small[0][1]} and #{small[0][1]} <= #{big[1][1]}"
+    
+    small[0][0] < big[1][0] and big[1][0] < small[1][0] and
+    small[0][1] < big[1][1] and big[1][1] < small[1][1]
   end
 end
