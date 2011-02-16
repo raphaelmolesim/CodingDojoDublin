@@ -1,10 +1,14 @@
 class Rectangle
   def initialize(p1, p2)
-    @p1, @p2 = p1, p2
+    @points = [p1, p2]
+  end
+  
+  def [] (i)
+    @points[i]
   end
   
   def overlaps?(other)
-    @p1[1] <= other[2] or rectangle1[3] <= rectangle2[3]
-    true
+    (self[1][0] >= other[1][0] or self[1][1] >= other[1][1]) and
+    
   end
 end
