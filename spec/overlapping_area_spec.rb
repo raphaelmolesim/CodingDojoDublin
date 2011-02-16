@@ -22,4 +22,8 @@ describe OverlappingArea do
     overlapping_area([0,0,2,2], [1,0,2,1]).should == 1
   end
   
+  it "should return 2 even if the size of the r2 is 3" do
+    overlapping_area([0,0,2,2], [-1,0,2,1]).should == 2
+  end
+  
 end
