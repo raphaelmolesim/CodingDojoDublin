@@ -1,10 +1,6 @@
 require "overlapping_area"
 
-describe OverlappingArea do
-  
-  it "should be to able to createa instance" do
-    OverlappingArea.new.should be_an OverlappingArea
-  end
+describe "overlapping_area" do
   
   it "should return zero if I don't have retangles" do
     overlapping_area.should == 0
